@@ -1,6 +1,6 @@
 package io.snowcamp.workshop.dedede.controller;
 
-import io.snowcamp.workshop.dedede.controller.dto.JewellDto;
+import io.snowcamp.workshop.dedede.controller.dto.JewelDto;
 import io.snowcamp.workshop.dedede.domain.Jewel;
 import io.snowcamp.workshop.dedede.service.JewelService;
 import lombok.RequiredArgsConstructor;
@@ -17,8 +17,8 @@ public class OrderController {
     private final JewelService jewelService;
 
     @PutMapping("/jewels")
-    public JewellDto makeNewJewelOrder(@RequestParam(name = "price") int price) {
+    public JewelDto makeNewJewelOrder(@RequestParam(name = "price") int price) {
         Jewel jewel = jewelService.createJewel(price);
-        return new JewellDto(jewel.getName(), jewel.getDescription());
+        return new JewelDto(jewel.getName(), jewel.getDescription());
     }
 }

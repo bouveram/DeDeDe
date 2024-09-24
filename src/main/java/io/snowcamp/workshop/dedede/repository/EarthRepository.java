@@ -1,15 +1,17 @@
 package io.snowcamp.workshop.dedede.repository;
 
+import io.snowcamp.workshop.dedede.domain.Diamond;
+import io.snowcamp.workshop.dedede.domain.Gold;
 import org.springframework.stereotype.Repository;
 
 @Repository
 public class EarthRepository {
 
-    public boolean getGold() {
-        return true;
+    public Gold getGold() {
+        return new Gold();
     }
 
-    public boolean getDiamond() {
-        return true;
+    public Diamond getDiamond() {
+        return new Diamond();
     }
 }
